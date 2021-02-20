@@ -30,10 +30,10 @@
                         </a>
                         <ul class="collapse submenu list-unstyled" id="app" data-parent="#accordionExample">
                             <li>
-                                <a href="apps_chat.html"> Liste </a>
+                                <a href="{{url('listeDesCollectes')}}"> Liste </a>
                             </li>
                             <li>
-                                <a href="apps_mailbox.html"> Ajouter  </a>
+                                <a href="{{url('ajouterCollecte')}}"> Ajouter  </a>
                             </li>
                             <i class="fad fa-album-collection"></i>
                            

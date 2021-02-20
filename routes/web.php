@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CollecteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +19,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('index','index');
+Route::view('index','layout.base');
+
+
+
+// La liste des collectes
+ Route::get('listeDesCollectes',[CollecteController::class, 'index']);
+
+
+ //Ajouter une collecte
+ Route::get('ajouterCollecte',[CollecteController::class, 'ajoute']);
+
+ //Persistance des donnees
+ Route::post('ajouterCollecte',[CollecteController::class, 'ajouter']);
+
+ //Login
+ Route::get('login',[LoginController::class,'login']);
+
+
+ //Register
+ Route::get('register',[LoginController::class,'registerView']);
+
+ //Enregistrer
+ Route::post('register',[LoginController::class,'registerAdd']);
