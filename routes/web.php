@@ -16,7 +16,7 @@ use App\Http\Controllers\CollecteController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('client.home');
 });
 
 Route::view('index','layout.base');
@@ -42,3 +42,9 @@ Route::view('index','layout.base');
 
  //Enregistrer
  Route::post('register',[LoginController::class,'registerAdd']);
+
+
+
+
+ //Client
+ Route::view('main','client.main');

@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-md-4 mr-auto mt-5 text-md-left text-center">
                 <a href="index.html" class="ml-md-5">
-                    <img alt="image-404" src="assets/img/90x90.jpg" class="theme-logo">
+                    <img alt="image-404" src="assets/img/admin_logo.png" class="theme-logo">
                 </a>
             </div>
         </div>
