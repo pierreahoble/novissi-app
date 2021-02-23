@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categorie;
 use Illuminate\Http\Request;
 
 class CollecteController extends Controller
@@ -15,8 +16,13 @@ class CollecteController extends Controller
 
     //Vue pour ajouter une collecte
 
-    public function ajoute(){
-        return view('admin.collecte.ajouterCollecte');
+    public function ajoute()
+    {
+        $categories=Categorie::all();
+
+        return view('admin.collecte.ajouterCollecte',[
+            'categories'=>$categories
+        ]);
     }
 
 

@@ -9,9 +9,9 @@
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/pages/error/style-400.css" rel="stylesheet" type="text/css" />
+    <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/css/plugins.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/css/pages/error/style-400.css')}}" rel="stylesheet" type="text/css" />
     <!-- END GLOBAL MANDATORY STYLES -->
     
 </head>
@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-md-4 mr-auto mt-5 text-md-left text-center">
                 <a href="index.html" class="ml-md-5">
-                    <img alt="image-404" src="assets/img/admin_logo.png" class="theme-logo">
+                    <img alt="image-404" src="{{asset('assets/img/admin_logo.png')}}" class="theme-logo">
                 </a>
             </div>
         </div>
@@ -35,9 +35,9 @@
         </div>
     </div>    
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-    <script src="assets/js/libs/jquery-3.1.1.min.js"></script>
-    <script src="bootstrap/js/popper.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{asset('assets/js/libs/jquery-3.1.1.min.js')}}"></script>
+    <script src="{{asset('bootstrap/js/popper.min.js')}}"></script>
+    <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 </body>
 </html>

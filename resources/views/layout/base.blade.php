@@ -27,7 +27,7 @@
      <link rel="stylesheet" href="{{asset('plugins/font-icons/fontawesome/css/regular.css')}}">
      <link rel="stylesheet" href="{{asset('plugins/font-icons/fontawesome/css/fontawesome.css')}}">
  
-     <style>
+     {{-- <style>
          .feather-icon .icon-section {
              padding: 30px;
          }
@@ -141,9 +141,15 @@
              font-size: 14px;
          }
      </style>
- 
+  --}}
 
     @yield('style')
+    
+
+
+    @livewireStyles
+
+  
 
 </head>
 
@@ -192,7 +198,9 @@
 
                 <div class="row layout-top-spacing">
 
-                 
+                    @include('layout.message')
+
+
                     @yield('contenu')
                  
 
@@ -219,7 +227,7 @@
         });
     </script>
     <script src="{{asset('assets/js/custom.js')}}"></script>
-    <script src="plugins/highlight/highlight.pack.js"></script>
+    <script src="{{asset('plugins/highlight/highlight.pack.js')}}"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
@@ -233,9 +241,15 @@
     </script>
     
 
+    @livewireScripts
 
     @yield('script')
 
+
+
+
+
+  
 </body>
 
 </html>
