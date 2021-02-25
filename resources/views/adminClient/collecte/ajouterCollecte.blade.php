@@ -1,4 +1,4 @@
-@extends('layout.base')
+@extends('layout.baseClient')
  
 @section('style')
 <!--  BEGIN CUSTOM STYLE FILE  -->
@@ -11,8 +11,8 @@
 <!-- END PAGE LEVEL PLUGINS -->
 
 <!-- BEGIN THEME GLOBAL STYLES -->
-<link href="plugins/flatpickr/flatpickr.css" rel="stylesheet" type="text/css">
-<link href="plugins/noUiSlider/nouislider.min.css" rel="stylesheet" type="text/css">
+<link href="{{asset('plugins/flatpickr/flatpickr.css')}}" rel="stylesheet" type="text/css">
+<link href="{{asset('plugins/noUiSlider/nouislider.min.css')}}" rel="stylesheet" type="text/css">
 <!-- END THEME GLOBAL STYLES -->
 
 @endsection
@@ -36,96 +36,101 @@
            <button type="button" class="btn btn-primary mb-1 mt-4" data-toggle="modal" data-target="#exampleModal">Ajouter un invité</button>
        </div>
 
+      
        <div class="row layout-top-spacing">
 
-           <div id="basic" class="col-lg-12 layout-spacing">
-               <div class="statbox widget box box-shadow">
-                   <div class="widget-header">
-                       <div class="row">
-                           <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                               <h4>Ajouter une collecte</h4>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="widget-content widget-content-area">
-                       <form class="simple-example" action="{{url('ajouterCollecte')}}" method="POST">
-                           @csrf
-                           <div class="form-row">
-                               <div class="col-md-12 mb-4">
+        <div id="basic" class="col-lg-12 layout-spacing">
+            <div class="statbox widget box box-shadow">
+                <div class="widget-header">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <h4>Ajouter une collecte</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-content widget-content-area">
+                    <form class="simple-example" action="{{url('ajouterCollecte')}}" method="POST">
+                        @csrf
+                        <div class="form-row">
+                            <div class="col-md-12 mb-4">
 
-                                   <label for="objet">Objet de la collecte</label>
-                                   <input type="text" name="objet" class="form-control mb-3" id="objet" placeholder="Entrer Objet de la collecte" value="" required>
-                                   <div class="invalid-feedback">
-                                       Please fill the name
-                                   </div>
+                                <label for="objet">Objet de la collecte</label>
+                                <input type="text" name="objet" value="{{old('objet')}}" class="form-control mb-3" id="objet" placeholder="Entrer Objet de la collecte" required> @error('objet') <span class="error text-danger">{{ $message }}</span>                                    @enderror
 
 
-                                   <label for="categorie">Catégorie de la collecte</label>
-                                   <select name="categorie" id="categorie" required class="custom-select mb-3">
-                                       <option value="" >Choisir une catégorie</option>
-                                       <option value="Marriage">Marriage</option>
-                                       <option value="Anniverssaire">Anniverssaire</option>
-                                       <option value="Don à une association">Don à une association</option>
-                                       <option value="Funérailles">Funérailles</option>
-                                   </select>
-                                   <div class="invalid-feedback">
-                                       Please fill the name
-                                   </div>
+                                <label for="categorie">Catégorie de la collecte</label>
+                                <select name="categorie" class="custom-select mb-3">
+                                    <option value=""  >Choisir une catégorie</option>
+                                    @foreach ($categories as $categorie)
+                                    <option value="{{$categorie->id}}">{{$categorie->libelle}}</option>
+                                    @endforeach
+                                </select>
 
 
-                                   <label for="montant">Montant total à financer</label>
-                                   <input type="number" name="montant" class="form-control mb-3" id="montant" placeholder="Entrer Montant total à financer" value="" required>
-                                   <div class="invalid-feedback">
-                                       Please fill the name
-                                   </div>
+                                <div>
 
-
-                                   <label for="basicFlatpickr">Date début de la collecte</label>
-                                   <input type="text" name="datedebut" class="form-control flatpickr flatpickr-input active mb-3" id="basicFlatpickr" placeholder="Entrer Date de debut de la collecte" value="" required readonly="readonly">
-                                   <div class="invalid-feedback">
-                                       Please fill the name
-                                   </div>
-
-
-                                   <label for="basicFlatpickrz">Date fin de la collecte</label>
-                                   <input type="text" name="datefin" class="form-control flatpickr flatpickr-input active mb-3" id="basicFlatpickrz" placeholder="Entrer Date de debut de la collecte" value="" required readonly="readonly">
-                                   <div class="invalid-feedback">
-                                       Please fill the name
-                                   </div>
-
-
-                                   <label for="liste">La liste des invités</label>
-                                   <select name="liste[]" id="liste" required class="form-control tagging mb-3" multiple="multiple">
-                                       <option value="" >Choisir une catégorie</option>
-                                       <option value="Kodjo">Kodjo</option>
-                                       <option value="Serge">Serge</option>
-                                       <option value="Bruno">Bruno</option>
-                                   </select>
-                                   <div class="invalid-feedback">
-                                       Please fill the name
-                                   </div>
+                                    <label for="montant">Montant total à financer</label>
+                                    <input type="number" name="montant" value="{{old('montant')}}" class="form-control mb-3" id="montant" placeholder="Entrer Montant total à financer" required> @error('montant') <span class="error text-danger">{{ $message }}</span>                                        @enderror
+                                </div>
 
 
 
-                                   <label for="beneficiaire">Bénéficiaire de la collecte</label>
-                                   <input type="text" name="beneficiaire" class="form-control mb-3" id="beneficiaire" placeholder="Entrer Le Bénéficiaire de la collecte" value="" required>
-                                   <div class="invalid-feedback">
-                                       Please fill the name
-                                   </div>
+                                <div>
+
+                                    <label for="basicFlatpickr">Date début de la collecte</label>
+                                    <input type="text" name="datedebut" value="{{old('datedebut')}}" class="form-control flatpickr flatpickr-input active mb-3" id="basicFlatpickr" placeholder="Entrer Date de debut de la collecte" required readonly="readonly">                                        @error('datedebut') <span class="error text-danger">{{ $message }}</span> @enderror
+                                </div>
+
+
+                                <label for="basicFlatpickrz">Date fin de la collecte</label>
+                                <input type="text" name="datefin" value="{{old('datefin')}}" class="form-control flatpickr flatpickr-input active mb-3" id="basicFlatpickrz" placeholder="Entrer Date de fin de la collecte" required readonly="readonly">                                    @error('datefin') <span class="error text-danger">{{ $message }}</span> @enderror
+
+
+                                <div>
+                                    <label for="beneficiaire">Bénéficiaire de la collecte</label>
+                                    <input type="text" name="beneficiaire" value="{{old('beneficiaire')}}" class="form-control mb-3" id="beneficiaire" placeholder="Entrer Le Bénéficiaire de la collecte" required> @error('beneficiaire') <span class="error text-danger">{{ $message }}</span>                                        @enderror
+
+                                </div>
 
 
 
-                               </div>
-                           </div>
-                           <button class="btn btn-success submit-fn mt-2" type="submit">Sauvegarder</button>
-                       </form>
+                                <label for="liste"> La liste des invités</label>
 
-                   </div>
+                                <div>
+                                    <select name="liste[]" id="liste" required class="form-control tagging mb-3" multiple>
+                                        <option value="">Choisir les invités</option>
+                                        @foreach ($invites as $invite)
+                                        <option value="{{$invite->id}}">{{$invite->nom}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                {{-- @error('liste') <span class="error text-danger">{{ $message }}</span> @enderror --}} {{--
+                                <div wire:ignore>
+                                    <label for="data">Catégorie de la collecte</label>
+                                    <select wire:model="data" id="select2" name="data[]" class="custom-select  mb-3" multiple>
+                                        <option  >Choisir une catégorie</option>
+                                        @foreach ($categories as $categorie)
+                                        <option aria-valuenow="{{$categorie->id}}">{{$categorie->libelle}}</option>
+                                        @endforeach
+                                    </select>
 
-               </div>
-           </div>
+                                </div>
+                                --}}
 
-       </div>
+
+
+
+                            </div>
+                        </div>
+                        <button class="btn btn-success submit-fn mt-2" type="submit">Sauvegarder</button>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
    </div>
 </div>
 

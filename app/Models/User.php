@@ -43,4 +43,29 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+
+
+    /**
+     * Get all of the invites for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function invites()
+    {
+        return $this->hasMany(Invite::class, 'user_id');
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }

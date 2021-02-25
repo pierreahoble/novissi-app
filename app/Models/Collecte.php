@@ -22,6 +22,17 @@ class Collecte extends Model
     ];
 
 
+    /**
+     * Get the user associated with the Collecte
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function categorie()
+    {
+        return $this->belongsTo(Categorie::class, 'categorie_id', 'id');
+    }
+
+
 
 
 }

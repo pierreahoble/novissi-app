@@ -3,8 +3,9 @@
 
     <div>
         <div class="col-md-12 mb-3 text-right">
-            <button type="button" class="btn btn-primary mb-1 mt-4" data-toggle="modal" data-target="#exampleModal">Ajouter un invité</button>
+            <a href="{{url('admin/ajouteInvite')}}" class="btn btn-primary mb-1 mt-4">Ajouter un invité</a>
         </div>
+
 
         <div class="row layout-top-spacing">
 
@@ -18,60 +19,63 @@
                         </div>
                     </div>
                     <div class="widget-content widget-content-area">
-                        <form class="simple-example" wire:submit.prevent="addCollecte" >
+                        <form class="simple-example" action="{{url('ajouterCollecte')}}" method="POST">
                             @csrf
                             <div class="form-row">
                                 <div class="col-md-12 mb-4">
 
                                     <label for="objet">Objet de la collecte</label>
-                                    <input type="text" wire:model="objet" class="form-control mb-3" id="objet" placeholder="Entrer Objet de la collecte"  required>
-                                    @error('objet') <span class="error text-danger">{{ $message }}</span> @enderror
+                                    <input type="text" name="objet" value="{{old('objet')}}" class="form-control mb-3" id="objet" placeholder="Entrer Objet de la collecte" required> @error('objet') <span class="error text-danger">{{ $message }}</span>                                    @enderror
 
 
                                     <label for="categorie">Catégorie de la collecte</label>
-                                    <select wire:model="categorie" class="custom-select mb-3">
-                                        <option  >Choisir une catégorie</option>
+                                    <select name="categorie" class="custom-select mb-3">
+                                        <option value=""  >Choisir une catégorie</option>
                                         @foreach ($categories as $categorie)
                                         <option value="{{$categorie->id}}">{{$categorie->libelle}}</option>
                                         @endforeach
                                     </select>
-                                   
-
-                                    <label for="montant">Montant total à financer</label>
-                                    <input type="number" wire:model="montant" class="form-control mb-3" id="montant" placeholder="Entrer Montant total à financer" required  >
-                                    @error('montant') <span class="error text-danger">{{ $message }}</span> @enderror
 
 
+                                    <div>
+
+                                        <label for="montant">Montant total à financer</label>
+                                        <input type="number" name="montant" value="{{old('montant')}}" class="form-control mb-3" id="montant" placeholder="Entrer Montant total à financer" required> @error('montant') <span class="error text-danger">{{ $message }}</span>                                        @enderror
+                                    </div>
 
 
-                                    <label for="basicFlatpickr">Date début de la collecte</label>
-                                    <input type="text" wire:model="datedebut" class="form-control flatpickr flatpickr-input active mb-3" id="basicFlatpickr" placeholder="Entrer Date de debut de la collecte" required  readonly="readonly">
-                                    @error('datedebut') <span class="error text-danger">{{ $message }}</span> @enderror
+
+                                    <div>
+
+                                        <label for="basicFlatpickr">Date début de la collecte</label>
+                                        <input type="text" name="datedebut" value="{{old('datedebut')}}" class="form-control flatpickr flatpickr-input active mb-3" id="basicFlatpickr" placeholder="Entrer Date de debut de la collecte" required readonly="readonly">                                        @error('datedebut') <span class="error text-danger">{{ $message }}</span> @enderror
+                                    </div>
 
 
                                     <label for="basicFlatpickrz">Date fin de la collecte</label>
-                                    <input type="text" wire:model="datefin" class="form-control flatpickr flatpickr-input active mb-3" id="basicFlatpickrz" placeholder="Entrer Date de debut de la collecte" required readonly="readonly">
-                                    @error('datefin') <span class="error text-danger">{{ $message }}</span> @enderror
+                                    <input type="text" name="datefin" value="{{old('datefin')}}" class="form-control flatpickr flatpickr-input active mb-3" id="basicFlatpickrz" placeholder="Entrer Date de fin de la collecte" required readonly="readonly">                                    @error('datefin') <span class="error text-danger">{{ $message }}</span> @enderror
 
 
-                                    <label for="beneficiaire">Bénéficiaire de la collecte</label>
-                                    <input type="text" wire:model="beneficiaire" class="form-control mb-3" id="beneficiaire" placeholder="Entrer Le Bénéficiaire de la collecte"  required>
-                                    @error('beneficiaire') <span class="error text-danger">{{ $message }}</span> @enderror
+                                    <div>
+                                        <label for="beneficiaire">Bénéficiaire de la collecte</label>
+                                        <input type="text" name="beneficiaire" value="{{old('beneficiaire')}}" class="form-control mb-3" id="beneficiaire" placeholder="Entrer Le Bénéficiaire de la collecte" required> @error('beneficiaire') <span class="error text-danger">{{ $message }}</span>                                        @enderror
+
+                                    </div>
 
 
 
-                                    <label for="liste"> La liste des invités</label> 
+                                    <label for="liste"> La liste des invités</label>
 
-                                    <div wire:ignore>
-                                        <select wire:model="liste" name="liste[]" id="liste" required class="form-control tagging mb-3" multiple>
-                                            <option value="Kodjo">Kodjo</option>
-                                            <option value="Serge">Serge</option>
-                                            <option value="Bruno">Bruno</option>
+                                    <div>
+                                        <select name="liste[]" id="liste" required class="form-control tagging mb-3" multiple>
+                                            <option value="">Choisir les invités</option>
+                                            @foreach ($invites as $invite)
+                                            <option value="{{$invite->id}}">{{$invite->nom}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
-                                    {{-- @error('liste') <span class="error text-danger">{{ $message }}</span> @enderror --}}
-
-                                    {{-- <div wire:ignore>
+                                    {{-- @error('liste') <span class="error text-danger">{{ $message }}</span> @enderror --}} {{--
+                                    <div wire:ignore>
                                         <label for="data">Catégorie de la collecte</label>
                                         <select wire:model="data" id="select2" name="data[]" class="custom-select  mb-3" multiple>
                                             <option  >Choisir une catégorie</option>
@@ -81,9 +85,9 @@
                                         </select>
 
                                     </div>
-                --}}
+                                    --}}
 
-                                   
+
 
 
                                 </div>
@@ -100,7 +104,7 @@
     </div>
 
 
-    <!-- Modal -->
+    {{-- <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -115,47 +119,53 @@
 
                     <div class="col-md-12 mb-4">
 
-                        <label for="nom">Nom de l'invités</label>
-                        <input type="text" name="nom" class="form-control mb-3" id="nom" placeholder="Entrer Nom de l'invités"  required>
-                        <div class="invalid-feedback">
-                            Please fill the name
-                        </div>
+                        <form wire:submit.prevent="addInvite">
+
+
+
+                            <label for="nom">Nom de l'invités</label>
+                            <input type="text" wire::model="nom" class="form-control mb-3" id="nom" placeholder="Entrer Nom de l'invités" required>
+                            <div class="">
+                                @error('nom') <span class="error text-danger">{{ $message }}</span> @enderror
+
+                            </div>
 
 
 
 
-                        <label for="prenom">Prenom de l'invités</label>
-                        <input type="text" name="prenom" class="form-control mb-3" id="prenom" placeholder="Entrer Prenom de l'invités"  required>
-                        <div class="invalid-feedback">
-                            Please fill the name
-                        </div>
+                            <label for="prenom">Prenom de l'invités</label>
+                            <input type="text" wire::model="prenom" class="form-control mb-3" id="prenom" placeholder="Entrer Prenom de l'invités" required>
+                            <div class="">
+                                @error('prenom') <span class="error text-danger">{{ $message }}</span> @enderror
+
+                            </div>
 
 
-                        <label for="email">Adresse email de l'invités</label>
-                        <input type="text" name="email" class="form-control mb-3" id="email" placeholder="Entrer Adresse email de l'invités"  required>
-                        <div class="invalid-feedback">
-                            Please fill the name
-                        </div>
+                            <label for="email">Adresse email de l'invités</label>
+                            <input type="text" wire::model="email" class="form-control mb-3" id="email" placeholder="Entrer Adresse email de l'invités" required>
+                            <div class="">
+                                @error('email') <span class="error text-danger">{{ $message }}</span> @enderror
+
+                            </div>
 
 
-                        <label for="telephone">Numéro de Téléphone de l'invités</label>
-                        <input type="text" name="telephone" class="form-control mb-3" id="telephone" placeholder="Entrer Numéro de Téléphone de l'invités"  required>
-                        <div class="invalid-feedback">
-                            Please fill the name
-                        </div>
+                            <label for="telephone">Numéro de Téléphone de l'invités</label>
+                            <input type="text" wire::model="telephone" class="form-control mb-3" id="telephone" placeholder="Entrer Numéro de Téléphone de l'invités" required>
+                            <div class="">
+                                @error('telephone') <span class="error text-danger">{{ $message }}</span> @enderror
 
-
-
-
+                            </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Annuller</button>
-                    <button type="button" class="btn btn-success">Sauvegarder</button>
+                    <button type="submit" class="btn btn-success">Sauvegarder</button>
                 </div>
+                </form>
+
             </div>
         </div>
-    </div>
+    </div> --}}
 
 
 </div>

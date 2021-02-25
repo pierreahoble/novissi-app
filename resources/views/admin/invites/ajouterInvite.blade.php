@@ -22,7 +22,7 @@
 
 
 
-@livewire('ajouter-collecte')
+@livewire('ajouter-invite')
 
 
 

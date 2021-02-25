@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\CollecteController;
 use App\Http\Controllers\CategorieController;
 
@@ -47,10 +48,28 @@ Route::get('logout',[UserController::class,'logout']);
 
 
  //Ajouter une collecte
- Route::get('admin/ajouterCollecte',[CollecteController::class, 'ajoute'])->name('adminAjoutCollece');
+ Route::get('admin/ajouterCollecte',[CollecteController::class, 'ajoute'])->name('adminAjoutCollecte');
+
+ //Approver les donnees
+ Route::get('admin/approuve/{id}',[CollecteController::class,'approuve'])->name('approuve');
+
+ //Suspendre les donnees
+ Route::get('admin/suspendre/{id}',[CollecteController::class,'suspendre'])->name('suspendre');
+
+
+ //Suspendre les donnees
+ Route::get('admin/attente/{id}',[CollecteController::class,'attente'])->name('attente');
+
+
+ //Details collecte
+ Route::get('admin/details/{id}',[CollecteController::class,'detail'])->name('detail');
 
  //Persistance des donnees
  Route::post('ajouterCollecte',[CollecteController::class, 'ajouter']);
+
+ //Ajouter invites
+
+ Route::get('admin/ajouteInvite',[CollecteController::class,'ajouteInvite']);
 
 
 
@@ -80,3 +99,25 @@ Route::get('admin/ajouterCategorie',[CategorieController::class,'addCategorie'])
 
  //Client
  Route::view('main','client.main');
+
+
+
+
+
+
+
+
+
+
+############################-----Client Route----###########################
+
+Route::get('user/listeDesCollectes',[ClientController::class,'index'])->name('listeColecteUser');
+
+//Ajouter collecte user
+Route::get('user/ajouterCollecte',[ClientController::class,'ajouter'])->name('ajouterCollecteUser');
+
+//Valider collecte user
+Route::post('user/ajouterCollecte',[ClientController::class,'ajoute']);
+
+//Details
+Route::get('user/detailCollecte/{id}',[ClientController::class,'detail'])->name('detailUser');

@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Collecte;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Cknow\Money\Money;
+
 
 class UserController extends Controller
 {
@@ -14,6 +17,7 @@ class UserController extends Controller
     //view Admin
     public function border()
     {
+        
         return view('admin.bord.index');
     }
 
@@ -21,8 +25,11 @@ class UserController extends Controller
     //view client
     public function index()
     {
-
-        return view('adminClient.collecte.listeCollecte');
+        $collectes=Collecte::all();
+        
+        return view('adminClient.collecte.listeCollecte',[
+            'collectes'=>$collectes
+        ]);
     }
 
 

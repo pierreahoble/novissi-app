@@ -2,50 +2,56 @@
 
 namespace App\Http\Controllers;
 
-use Session;
-use Carbon\Carbon;
+use App\Models\Invite;
 use App\Models\Collecte;
 use App\Models\Categorie;
 use Illuminate\Http\Request;
-use App\Models\CollecteInvite;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
+Use Session;
+Use Carbon\carbon;
 
-class CollecteController extends Controller
+class ClientController extends Controller
 {
+
     public function index()
     {
-        return view('admin.collecte.listeCollecte');
-    }
 
-
-
-    //Vue pour ajouter une collecte
-
-    public function ajoute()
-    {
-        $categories=Categorie::all();
-
-        return view('admin.collecte.ajouterCollecte',[
-            'categories'=>$categories
+        $id=Auth::user()->id;
+        $collectes=Collecte::where('user_id',$id)->get();
+        return view('adminClient.collecte.listeCollecte',[
+            'collectes'=>$collectes
         ]);
     }
 
 
 
-    public function ajouteInvite(){
-        return view('admin.invites.ajouterInvite');
+    public function detail($id)
+    {
+        $id=Crypt::decrypt($id);
+        $collecte=Collecte::find($id);
+
+        return view('adminClient.collecte.detailsCollecte',[
+            'collecte'=>$collecte
+        ]);
+
+    }
+
+
+    public function ajouter()
+    {
+        $invites=Invite::where('user_id',Auth::user()->id)->get();
+        $categories=Categorie::all();
+        return view('adminClient.collecte.ajouterCollecte',[
+            'categories'=>$categories,
+            'invites'=>$invites
+        ]);
     }
 
 
 
-
-   
-
-
-    public function ajouter(REQUEST $request)
+    public function ajoute(REQUEST $request)
     {
-        
         $this->validate($request,[
             'categorie'=>'required',
             'objet'=>'required',
@@ -95,68 +101,8 @@ class CollecteController extends Controller
             ]);
         }
         Session::flash('succes','Collecte ajouté avec succes');
-        
-        return redirect()->route('adminAjoutCollecte');
-
-        }
-
-
-
-        public function approuve($id)
-        {
-           $id= Crypt::decrypt($id);
-           $collecte=Collecte::where('id',$id)->update([
-               'status'=>1
-           ]);
-
-           Session::flash('succes','Collecte approuvée avec succes');
-           return redirect()->back();
-        }
-
-
-        public function suspendre($id)
-        {
-           $id= Crypt::decrypt($id);
-           $collecte=Collecte::where('id',$id)->update([
-               'status'=>2
-           ]);
-
-           Session::flash('succes','Collecte suspendue avec succes');
-           return redirect()->back();
-        }
-
-
-
-        public function attente($id)
-        {
-           $id= Crypt::decrypt($id);
-           $collecte=Collecte::where('id',$id)->update([
-               'status'=>0
-           ]);
-
-           Session::flash('succes','Collecte mise en attente avec succes');
-           return redirect()->back();
-        }
-
-
-
-        public function detail($id)
-        {
-            $id=Crypt::decrypt($id);
-            $collecte=Collecte::find($id);
-
-            return view('admin.collecte.detailsCollecte',[
-                'collecte'=>$collecte
-            ]);
-
-        }
-
-
-
-
-
-
-
+        dd();
+        return redirect()->route('ajouterCollecteUser');
     }
 
 
@@ -168,10 +114,4 @@ class CollecteController extends Controller
 
 
 
-
-
-
-
-
-
-
+}
