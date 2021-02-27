@@ -13,6 +13,17 @@ use Illuminate\Support\Facades\Crypt;
 
 class CollecteController extends Controller
 {
+
+    public function __construct()
+    {
+       
+        $this->middleware('AuthAdminMiddleware');
+    }
+
+
+
+   
+
     public function index()
     {
         return view('admin.collecte.listeCollecte');

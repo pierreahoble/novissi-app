@@ -47,8 +47,8 @@
                         <div class="col-lg-2 col-md-4 col-sm-6 footer-widget">
                             <div class="footer-widget__title section-space--mb_50"></div>
                             <ul class="footer-widget__list">
-                                <li><a href="#" class="image_btn"><img class="img-fluid" src="assets/images/icons/aeroland-button-google-play.jpg" alt=""></a></li>
-                                <li><a href="#" class="image_btn"><img class="img-fluid" src="assets/images/icons/aeroland-button-app-store.jpg" alt=""></a></li>
+                                <li><a href="#" class="image_btn"><img class="img-fluid" src="{{asset('client/assets/images/icons/aeroland-button-google-play.jpg')}} " alt=""></a></li>
+                                <li><a href="#" class="image_btn"><img class="img-fluid" src="{{asset('client/assets/images/icons/aeroland-button-app-store.jpg')}}" alt=""></a></li>
                             </ul>
                         </div>
                     </div>
@@ -58,33 +58,33 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-md-6 text-center text-md-left">
-                            <span class="copyright-text">&copy; 2019 Mitech. <a href="https://hasthemes.com/">All Rights Reserved.</a></span>
+                            <span class="copyright-text">&copy; 2019 Mitech. <a href="https://hasthemes.com/">Tout Droits Reservés.</a></span>
                         </div>
-                        <div class="col-md-6 text-center text-md-right">
+                        {{-- <div class="col-md-6 text-center text-md-right">
                             <ul class="list ht-social-networks solid-rounded-icon">
 
                                 <li class="item">
-                                    <a href="https://twitter.com/" target="_blank" aria-label="Twitter" class="social-link hint--bounce hint--top hint--primary">
+                                    <a href="#" target="_blank" aria-label="Twitter" class="social-link hint--bounce hint--top hint--primary">
                                         <i class="fab fa-twitter link-icon"></i>
                                     </a>
                                 </li>
                                 <li class="item">
-                                    <a href="https://facebook.com/" target="_blank" aria-label="Facebook" class="social-link hint--bounce hint--top hint--primary">
+                                    <a href="#" target="_blank" aria-label="Facebook" class="social-link hint--bounce hint--top hint--primary">
                                         <i class="fab fa-facebook-f link-icon"></i>
                                     </a>
                                 </li>
                                 <li class="item">
-                                    <a href="https://instagram.com/" target="_blank" aria-label="Instagram" class="social-link hint--bounce hint--top hint--primary">
+                                    <a href="#" target="_blank" aria-label="Instagram" class="social-link hint--bounce hint--top hint--primary">
                                         <i class="fab fa-instagram link-icon"></i>
                                     </a>
                                 </li>
                                 <li class="item">
-                                    <a href="https://linkedin.com/" target="_blank" aria-label="Linkedin" class="social-link hint--bounce hint--top hint--primary">
+                                    <a href="#" target="_blank" aria-label="Linkedin" class="social-link hint--bounce hint--top hint--primary">
                                         <i class="fab fa-linkedin link-icon"></i>
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

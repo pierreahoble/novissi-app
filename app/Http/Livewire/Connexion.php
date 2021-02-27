@@ -41,6 +41,7 @@ class Connexion extends Component
             'dateNaissance'=>$this->dateNaissance,
             'telephone'=>$this->telephone,
             'email'=>$this->email,
+            'groupe_user'=>1,
             'password'=>bcrypt('1234'),
         ]);
 

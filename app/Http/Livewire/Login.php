@@ -41,7 +41,7 @@ class Login extends Component
 
         } else if ($user && Auth::user()->groupe_user==1) {
             
-            return redirect()->route('userListeCollecte');
+            return redirect('user/listeDesCollectes');;
 
         }else{
 

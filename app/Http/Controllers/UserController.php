@@ -2,14 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use Cknow\Money\Money;
 use App\Models\Collecte;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Cknow\Money\Money;
+use App\Http\Middleware\AuthAdminMiddleware;
 
 
 class UserController extends Controller
 {
+
+    public function __construct()
+    {
+       
+        $this->middleware('AuthAdminMiddleware');
+    }
 
 
 
@@ -27,7 +34,7 @@ class UserController extends Controller
     {
         $collectes=Collecte::all();
         
-        return view('adminClient.collecte.listeCollecte',[
+        return view('admin.collecte.listeCollecte',[
             'collectes'=>$collectes
         ]);
     }

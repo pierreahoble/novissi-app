@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="fr">
 
 
 <!-- Mirrored from demo.hasthemes.com/mitech-preview/index-services.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 Feb 2021 06:41:24 GMT -->
@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="icon" href="client/assets/images/favicon.ico">
+    <link rel="icon" href="{{asset('client/assets/images/favicon.ico')}}">
 
     <!-- CSS
         ============================================ -->
@@ -51,7 +51,7 @@
 <body>
 
 
-    <div class="preloader-activate preloader-active open_tm_preloader">
+    {{-- <div class="preloader-activate preloader-active open_tm_preloader">
         <div class="preloader-area-wrap">
             <div class="spinner d-flex justify-content-center align-items-center h-100">
                 <div class="bounce1"></div>
@@ -59,7 +59,7 @@
                 <div class="bounce3"></div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 
 
@@ -153,22 +153,22 @@
             </div>
             <div class="demo-quick-option-list">
                 <a class="link hint--bounce hint--black hint--top hint--dark" href="index-appointment.html" aria-label="Appointment">
-                    <img class="img-fluid" src="client/assets/images/demo-images/home-01.jpg" alt="Images">
+                    <img class="img-fluid" src="{{asset('client/assets/images/demo-images/home-01.jpg')}}" alt="Images">
                 </a>
                 <a class="link hint--bounce hint--black hint--top hint--dark" href="index-infotechno.html" aria-label="Infotechno">
-                    <img class="img-fluid" src="client/assets/images/demo-images/home-02.jpg" alt="Images">
+                    <img class="img-fluid" src="{{asset('client/assets/images/demo-images/home-02.jpg')}}" alt="Images">
                 </a>
                 <a class="link hint--bounce hint--black hint--top hint--dark" href="index-processing.html" aria-label="Processing">
-                    <img class="img-fluid" src="client/assets/images/demo-images/home-03.jpg" alt="Images">
+                    <img class="img-fluid" src="{{asset('client/assets/images/demo-images/home-03.jpg')}}" alt="Images">
                 </a>
                 <a class="link hint--bounce hint--black hint--top hint--dark" href="index-services.html" aria-label="Services">
-                    <img class="img-fluid" src="client/assets/images/demo-images/home-04.jpg" alt="Images">
+                    <img class="img-fluid" src="{{asset('client/assets/images/demo-images/home-04.jpg')}}" alt="Images">
                 </a>
                 <a class="link hint--bounce hint--black hint--top hint--dark" href="index-resolutions.html" aria-label="Resolutions">
-                    <img class="img-fluid" src="client/assets/images/demo-images/home-05.jpg" alt="Images">
+                    <img class="img-fluid" src="{{asset('client/assets/images/demo-images/home-05.jpg')}}" alt="Images">
                 </a>
                 <a class="link hint--bounce hint--black hint--top hint--dark" href="index-cybersecurity.html" aria-label="Cybersecurity">
-                    <img class="img-fluid" src="client/assets/images/demo-images/home-06.jpg" alt="Images">
+                    <img class="img-fluid" src="{{asset('client/assets/images/demo-images/home-06.jpg')}}" alt="Images">
                 </a>
             </div>
         </div>
@@ -186,7 +186,7 @@
                             <!-- logo -->
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="client/assets/images/logo/logo-dark.png" class="img-fluid" alt="">
+                                    <img src="{{asset('client/assets/images/logo/logo-dark.png')}}" class="img-fluid" alt="">
                                 </a>
                             </div>
                         </div>
@@ -435,7 +435,7 @@
 
 
     <!-- Main JS -->
-    <script src="{{asset('client/assets/js/main.js')}}"></script>
+    {{-- <script src="{{asset('client/assets/js/main.js')}}"></script> --}}
 
 
 </body>

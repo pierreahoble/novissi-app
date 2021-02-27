@@ -70,137 +70,137 @@
                                     <div class="swiper-wrapper brand-logo-slider__three" style="transform: translate3d(-2400px, 0px, 0px); transition-duration: 1000ms;"><div class="swiper-slide brand-logo brand-logo--slider swiper-slide-duplicate" data-swiper-slide-index="3" style="width: 170px; margin-right: 30px;">
                                             <a href="#">
                                                 <div class="brand-logo__image">
-                                                    <img src="client/assets/images/brand/mitech-client-logo-04-hover.png" class="img-fluid" alt="">
+                                                    <img src="{{asset('client/assets/images/brand/mitech-client-logo-04-hover.png')}}" class="img-fluid" alt="">
                                                 </div>
                                             </a>
                                         </div><div class="swiper-slide brand-logo brand-logo--slider swiper-slide-duplicate" data-swiper-slide-index="4" style="width: 170px; margin-right: 30px;">
                                             <a href="#">
                                                 <div class="brand-logo__image">
-                                                    <img src="client/assets/images/brand/mitech-client-logo-05-hover.png" class="img-fluid" alt="">
+                                                    <img src="{{asset('client/assets/images/brand/mitech-client-logo-05-hover.png')}}" class="img-fluid" alt="">
                                                 </div>
                                             </a>
                                         </div><div class="swiper-slide brand-logo brand-logo--slider swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="5" style="width: 170px; margin-right: 30px;">
                                             <a href="#">
                                                 <div class="brand-logo__image">
-                                                    <img src="client/assets/images/brand/mitech-client-logo-06-hover.png" class="img-fluid" alt="">
+                                                    <img src="{{asset('client/assets/images/brand/mitech-client-logo-06-hover.png')}}" class="img-fluid" alt="">
                                                 </div>
                                             </a>
                                         </div><div class="swiper-slide brand-logo brand-logo--slider swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="6" style="width: 170px; margin-right: 30px;">
                                             <a href="#">
                                                 <div class="brand-logo__image">
-                                                    <img src="client/assets/images/brand/mitech-client-logo-07-hover.png" class="img-fluid" alt="">
+                                                    <img src="{{asset('client/assets/images/brand/mitech-client-logo-07-hover.png')}}" class="img-fluid" alt="">
                                                 </div>
                                             </a>
                                         </div><div class="swiper-slide brand-logo brand-logo--slider swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="7" style="width: 170px; margin-right: 30px;">
                                             <a href="#">
                                                 <div class="brand-logo__image">
-                                                    <img src="client/assets/images/brand/mitech-client-logo-08-hover.png" class="img-fluid" alt="">
+                                                    <img src="{{asset('client/assets/images/brand/mitech-client-logo-08-hover.png')}}" class="img-fluid" alt="">
                                                 </div>
                                             </a>
                                         </div><div class="swiper-slide brand-logo brand-logo--slider swiper-slide-duplicate" data-swiper-slide-index="8" style="width: 170px; margin-right: 30px;">
                                             <a href="#">
                                                 <div class="brand-logo__image">
-                                                    <img src="client/assets/images/brand/mitech-client-logo-09-hover.png" class="img-fluid" alt="">
+                                                    <img src="{{asset('client/assets/images/brand/mitech-client-logo-09-hover.png')}}" class="img-fluid" alt="">
                                                 </div>
                                             </a>
                                         </div>
                                         <div class="swiper-slide brand-logo brand-logo--slider" data-swiper-slide-index="0" style="width: 170px; margin-right: 30px;">
                                             <a href="#">
                                                 <div class="brand-logo__image">
-                                                    <img src="client/assets/images/brand/mitech-client-logo-01-hover.png" class="img-fluid" alt="">
+                                                    <img src="{{asset('client/assets/images/brand/mitech-client-logo-01-hover.png')}}" class="img-fluid" alt="">
                                                 </div>
                                             </a>
                                         </div>
                                         <div class="swiper-slide brand-logo brand-logo--slider" data-swiper-slide-index="1" style="width: 170px; margin-right: 30px;">
                                             <a href="#">
                                                 <div class="brand-logo__image">
-                                                    <img src="client/assets/images/brand/mitech-client-logo-02-hover.png" class="img-fluid" alt="">
+                                                    <img src="{{asset('client/assets/images/brand/mitech-client-logo-02-hover.png')}}" class="img-fluid" alt="">
                                                 </div>
                                             </a>
                                         </div>
                                         <div class="swiper-slide brand-logo brand-logo--slider" data-swiper-slide-index="2" style="width: 170px; margin-right: 30px;">
                                             <a href="#">
                                                 <div class="brand-logo__image">
-                                                    <img src="client/assets/images/brand/mitech-client-logo-03-hover.png" class="img-fluid" alt="">
+                                                    <img src="{{asset('client/assets/images/brand/mitech-client-logo-03-hover.png')}}" class="img-fluid" alt="">
                                                 </div>
                                             </a>
                                         </div>
                                         <div class="swiper-slide brand-logo brand-logo--slider" data-swiper-slide-index="3" style="width: 170px; margin-right: 30px;">
                                             <a href="#">
                                                 <div class="brand-logo__image">
-                                                    <img src="client/assets/images/brand/mitech-client-logo-04-hover.png" class="img-fluid" alt="">
+                                                    <img src="{{asset('client/assets/images/brand/mitech-client-logo-04-hover.png')}}" class="img-fluid" alt="">
                                                 </div>
                                             </a>
                                         </div>
                                         <div class="swiper-slide brand-logo brand-logo--slider" data-swiper-slide-index="4" style="width: 170px; margin-right: 30px;">
                                             <a href="#">
                                                 <div class="brand-logo__image">
-                                                    <img src="client/assets/images/brand/mitech-client-logo-05-hover.png" class="img-fluid" alt="">
+                                                    <img src="{{asset('client/assets/images/brand/mitech-client-logo-05-hover.png')}}" class="img-fluid" alt="">
                                                 </div>
                                             </a>
                                         </div>
                                         <div class="swiper-slide brand-logo brand-logo--slider swiper-slide-prev" data-swiper-slide-index="5" style="width: 170px; margin-right: 30px;">
                                             <a href="#">
                                                 <div class="brand-logo__image">
-                                                    <img src="client/assets/images/brand/mitech-client-logo-06-hover.png" class="img-fluid" alt="">
+                                                    <img src="{{asset('client/assets/images/brand/mitech-client-logo-06-hover.png')}}" class="img-fluid" alt="">
                                                 </div>
                                             </a>
                                         </div>
                                         <div class="swiper-slide brand-logo brand-logo--slider swiper-slide-active" data-swiper-slide-index="6" style="width: 170px; margin-right: 30px;">
                                             <a href="#">
                                                 <div class="brand-logo__image">
-                                                    <img src="client/assets/images/brand/mitech-client-logo-07-hover.png" class="img-fluid" alt="">
+                                                    <img src="{{asset('client/assets/images/brand/mitech-client-logo-07-hover.png')}}" class="img-fluid" alt="">
                                                 </div>
                                             </a>
                                         </div>
                                         <div class="swiper-slide brand-logo brand-logo--slider swiper-slide-next" data-swiper-slide-index="7" style="width: 170px; margin-right: 30px;">
                                             <a href="#">
                                                 <div class="brand-logo__image">
-                                                    <img src="client/assets/images/brand/mitech-client-logo-08-hover.png" class="img-fluid" alt="">
+                                                    <img src="{{asset('client/assets/images/brand/mitech-client-logo-08-hover.png')}}" class="img-fluid" alt="">
                                                 </div>
                                             </a>
                                         </div>
                                         <div class="swiper-slide brand-logo brand-logo--slider" data-swiper-slide-index="8" style="width: 170px; margin-right: 30px;">
                                             <a href="#">
                                                 <div class="brand-logo__image">
-                                                    <img src="client/assets/images/brand/mitech-client-logo-09-hover.png" class="img-fluid" alt="">
+                                                    <img src="{{asset('client/assets/images/brand/mitech-client-logo-09-hover.png')}}" class="img-fluid" alt="">
                                                 </div>
                                             </a>
                                         </div>
                                     <div class="swiper-slide brand-logo brand-logo--slider swiper-slide-duplicate" data-swiper-slide-index="0" style="width: 170px; margin-right: 30px;">
                                             <a href="#">
                                                 <div class="brand-logo__image">
-                                                    <img src="client/assets/images/brand/mitech-client-logo-01-hover.png" class="img-fluid" alt="">
+                                                    <img src="{{asset('client/assets/images/brand/mitech-client-logo-01-hover.png')}}" class="img-fluid" alt="">
                                                 </div>
                                             </a>
                                         </div><div class="swiper-slide brand-logo brand-logo--slider swiper-slide-duplicate" data-swiper-slide-index="1" style="width: 170px; margin-right: 30px;">
                                             <a href="#">
                                                 <div class="brand-logo__image">
-                                                    <img src="client/assets/images/brand/mitech-client-logo-02-hover.png" class="img-fluid" alt="">
+                                                    <img src="{{asset('client/assets/images/brand/mitech-client-logo-02-hover.png')}}" class="img-fluid" alt="">
                                                 </div>
                                             </a>
                                         </div><div class="swiper-slide brand-logo brand-logo--slider swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 170px; margin-right: 30px;">
                                             <a href="#">
                                                 <div class="brand-logo__image">
-                                                    <img src="client/assets/images/brand/mitech-client-logo-03-hover.png" class="img-fluid" alt="">
+                                                    <img src="{{asset('client/assets/images/brand/mitech-client-logo-03-hover.png')}}" class="img-fluid" alt="">
                                                 </div>
                                             </a>
                                         </div><div class="swiper-slide brand-logo brand-logo--slider swiper-slide-duplicate" data-swiper-slide-index="3" style="width: 170px; margin-right: 30px;">
                                             <a href="#">
                                                 <div class="brand-logo__image">
-                                                    <img src="client/assets/images/brand/mitech-client-logo-04-hover.png" class="img-fluid" alt="">
+                                                    <img src="{{asset('client/assets/images/brand/mitech-client-logo-04-hover.png')}}" class="img-fluid" alt="">
                                                 </div>
                                             </a>
                                         </div><div class="swiper-slide brand-logo brand-logo--slider swiper-slide-duplicate" data-swiper-slide-index="4" style="width: 170px; margin-right: 30px;">
                                             <a href="#">
                                                 <div class="brand-logo__image">
-                                                    <img src="client/assets/images/brand/mitech-client-logo-05-hover.png" class="img-fluid" alt="">
+                                                    <img src="{{asset('client/assets/images/brand/mitech-client-logo-05-hover.png')}}" class="img-fluid" alt="">
                                                 </div>
                                             </a>
                                         </div><div class="swiper-slide brand-logo brand-logo--slider swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="5" style="width: 170px; margin-right: 30px;">
                                             <a href="#">
                                                 <div class="brand-logo__image">
-                                                    <img src="client/assets/images/brand/mitech-client-logo-06-hover.png" class="img-fluid" alt="">
+                                                    <img src="{{asset('client/assets/images/brand/mitech-client-logo-06-hover.png')}}" class="img-fluid" alt="">
                                                 </div>
                                             </a>
                                         </div></div>
@@ -234,13 +234,16 @@
             <div class="blog-pages-wrapper section-space--ptb_100">
                 <div class="container">
                     <div class="row">
+
+                        @foreach ($collectes as $collecte)
+                            
                         <div class="col-lg-4 col-md-6  mb-30 wow move-up animated" style="visibility: visible;">
                             <!--======= Single Blog Item Start ========-->
                             <div class="single-blog-item blog-grid">
                                 <!-- Post Feature Start -->
                                 <div class="post-feature blog-thumbnail">
                                     <a href="blog-post-layout-one.html">
-                                        <img class="img-fluid" src="client/assets/images/blog/blog-02-370x230.png" alt="Blog Images">
+                                        <img class="img-fluid" src="{{asset('client/assets/images/blog/blog-02-370x230.png')}}" alt="Blog Images">
                                     </a>
                                 </div>
                                 <!-- Post Feature End -->
@@ -250,19 +253,24 @@
                                     <div class="post-meta">
                                         <div class="post-date">
                                             <span class="far fa-calendar meta-icon"></span>
-                                            January 14, 2019
+                                            {{date('j F, Y', strtotime($collecte->datedebut)) }}
+                                        </div>
+
+                                        <div class="post-date">
+                                            <span class="far fa-calendar meta-icon"></span>
+                                            {{date('j F, Y', strtotime($collecte->datefin)) }}
                                         </div>
                                     </div>
 
                                     <h5 class="post-title font-weight--bold">
-                                        <a href="#">Ideas for High Returns on Investment</a>
+                                        <a href="#">{{$collecte->objet}}</a>
                                     </h5>
 
                                     <div class="post-excerpt mt-15">
                                         <p>Using the profit accumulator is one such way, and you should understand why it increases your chances of the profits. …</p>
                                     </div>
                                     <div class="btn-text">
-                                        <a href="#">Lire la suite ... <i class="ml-1 button-icon far fa-long-arrow-right"></i></a>
+                                        <a href="#">Faire un don.. <i class="ml-1 button-icon far fa-long-arrow-right"></i></a>
                                     </div>
                                 </div>
                                 <!-- Post info End -->
@@ -271,201 +279,19 @@
 
                         </div>
 
-                        <div class="col-lg-4 col-md-6  mb-30 wow move-up animated" style="visibility: visible;">
-                            <!--======= Single Blog Item Start ========-->
-                            <div class="single-blog-item blog-grid">
-                                <!-- Post Feature Start -->
-                                <div class="post-feature blog-thumbnail">
-                                    <a href="blog-post-layout-one.html">
-                                        <img class="img-fluid" src="client/assets/images/blog/blog-08-370x230.jpg" alt="Blog Images">
-                                    </a>
-                                </div>
-                                <!-- Post Feature End -->
+                 
+                        @endforeach
 
-                                <!-- Post info Start -->
-                                <div class="post-info lg-blog-post-info">
-                                    <div class="post-meta">
-                                        <div class="post-date">
-                                            <span class="far fa-calendar meta-icon"></span>
-                                            February 28, 2019
-                                        </div>
-                                    </div>
+                     
 
-                                    <h5 class="post-title font-weight--bold">
-                                        <a href="#">How Technology Made Businesses More Efficient</a>
-                                    </h5>
-
-                                    <div class="post-excerpt mt-15">
-                                        <p>They play a role in making operations more seamless, bridging the gap between authorities, consumers and businesses. …</p>
-                                    </div>
-                                    <div class="btn-text">
-                                        <a href="#">Lire la suite ... <i class="ml-1 button-icon far fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                                <!-- Post info End -->
-                            </div>
-                            <!--===== Single Blog Item End =========-->
-
-                        </div>
-
-                        <div class="col-lg-4 col-md-6  mb-30 wow move-up animated" style="visibility: visible;">
-                            <!--======= Single Blog Item Start ========-->
-                            <div class="single-blog-item blog-grid">
-                                <!-- Post Feature Start -->
-                                <div class="post-feature blog-thumbnail">
-                                    <a href="blog-post-layout-one.html">
-                                        <img class="img-fluid" src="client/assets/images/blog/blog-05-370x230.jpg" alt="Blog Images">
-                                    </a>
-                                </div>
-                                <!-- Post Feature End -->
-
-                                <!-- Post info Start -->
-                                <div class="post-info lg-blog-post-info">
-                                    <div class="post-meta">
-                                        <div class="post-date">
-                                            <span class="far fa-calendar meta-icon"></span>
-                                            February 28, 2019
-                                        </div>
-                                    </div>
-
-                                    <h5 class="post-title font-weight--bold">
-                                        <a href="#">Data Secure on Transitioning to a New Office</a>
-                                    </h5>
-
-                                    <div class="post-excerpt mt-15">
-                                        <p>It is far wiser to do your own installations and ensure that all data flowing through the organization has end-to-end encryption. …</p>
-                                    </div>
-                                    <div class="btn-text">
-                                        <a href="#">Lire la suite ... <i class="ml-1 button-icon far fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                                <!-- Post info End -->
-                            </div>
-                            <!--===== Single Blog Item End =========-->
-
-                        </div>
-
-                        <div class="col-lg-4 col-md-6  mb-30 wow move-up animated" style="visibility: visible;">
-                            <!--======= Single Blog Item Start ========-->
-                            <div class="single-blog-item blog-grid">
-                                <!-- Post Feature Start -->
-                                <div class="post-feature blog-thumbnail">
-                                    <a href="blog-post-layout-one.html">
-                                        <img class="img-fluid" src="client/assets/images/blog/blog-07-370x230.jpg" alt="Blog Images">
-                                    </a>
-                                </div>
-                                <!-- Post Feature End -->
-
-                                <!-- Post info Start -->
-                                <div class="post-info lg-blog-post-info">
-                                    <div class="post-meta">
-                                        <div class="post-date">
-                                            <span class="far fa-calendar meta-icon"></span>
-                                            February 28, 2019
-                                        </div>
-                                    </div>
-
-                                    <h5 class="post-title font-weight--bold">
-                                        <a href="#">The Keys to Persuading Customers Nowadays</a>
-                                    </h5>
-
-                                    <div class="post-excerpt mt-15">
-                                        <p>It is far wiser to do your own installations and ensure that all data flowing through the organization has end-to-end encryption. …</p>
-                                    </div>
-                                    <div class="btn-text">
-                                        <a href="#">Lire la suite ... <i class="ml-1 button-icon far fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                                <!-- Post info End -->
-                            </div>
-                            <!--===== Single Blog Item End =========-->
-
-                        </div>
-
-                        <div class="col-lg-4 col-md-6  mb-30 wow move-up animated" style="visibility: visible;">
-                            <!--======= Single Blog Item Start ========-->
-                            <div class="single-blog-item blog-grid">
-                                <!-- Post Feature Start -->
-                                <div class="post-feature blog-thumbnail">
-                                    <a href="blog-post-layout-one.html">
-                                        <img class="img-fluid" src="client/assets/images/blog/blog-05-370x230.jpg" alt="Blog Images">
-                                    </a>
-                                </div>
-                                <!-- Post Feature End -->
-
-                                <!-- Post info Start -->
-                                <div class="post-info lg-blog-post-info">
-                                    <div class="post-meta">
-                                        <div class="post-date">
-                                            <span class="far fa-calendar meta-icon"></span>
-                                            February 28, 2019
-                                        </div>
-                                    </div>
-
-                                    <h5 class="post-title font-weight--bold">
-                                        <a href="#">Blockchain Technology Effects on Logistics Sector?</a>
-                                    </h5>
-
-                                    <div class="post-excerpt mt-15">
-                                        <p>Changing or adding information to the “chain” requires the authentication of everyone who is in the network. …</p>
-                                    </div>
-                                    <div class="btn-text">
-                                        <a href="#">Lire la suite ... <i class="ml-1 button-icon far fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                                <!-- Post info End -->
-                            </div>
-                            <!--===== Single Blog Item End =========-->
-
-                        </div>
-
-                        <div class="col-lg-4 col-md-6  mb-30 wow move-up animated" style="visibility: visible;">
-                            <!--======= Single Blog Item Start ========-->
-                            <div class="single-blog-item blog-grid">
-                                <!-- Post Feature Start -->
-                                <div class="post-feature blog-thumbnail">
-                                    <a href="blog-post-layout-one.html">
-                                        <img class="img-fluid" src="client/assets/images/blog/blog-02-370x230.png" alt="Blog Images">
-                                    </a>
-                                </div>
-                                <!-- Post Feature End -->
-
-                                <!-- Post info Start -->
-                                <div class="post-info lg-blog-post-info">
-                                    <div class="post-meta">
-                                        <div class="post-date">
-                                            <span class="far fa-calendar meta-icon"></span>
-                                            February 28, 2019
-                                        </div>
-                                        <div class="post-date">
-                                            <span class="far fa-calendar meta-icon"></span>
-                                            February 28, 2019
-                                        </div>
-                                    </div>
-
-                                    <h5 class="post-title font-weight--bold">
-                                        <a href="#">How Wireless Technology is Changing Business</a>
-                                    </h5>
-
-                                    <div class="post-excerpt mt-15">
-                                        <p>If there’s one way that wireless technology has changed the way we work, it’s that everyone is now connected. …</p>
-                                    </div>
-                                    <div class="btn-text">
-                                        <a href="#">Lire la suite ... <i class="ml-1 button-icon far fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                                <!-- Post info End -->
-                            </div>
-                            <!--===== Single Blog Item End =========-->
-
-                        </div>
-
+                        {{-- {{$collectes->links()}} --}}
 
                         <div class="col-lg-12 wow move-up animated" style="visibility: visible;">
                             <div class="ht-pagination mt-30 pagination justify-content-center">
                                 <div class="pagination-wrapper">
 
                                     <ul class="page-pagination">
+                                        
                                         <li><a class="prev page-numbers" href="#">Precedent</a></li>
                                         <li><a class="page-numbers current" href="#">1</a></li>
                                         <li><a class="page-numbers" href="#">2</a></li>
