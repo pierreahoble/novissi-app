@@ -49,7 +49,7 @@
                                     <nav class="navigation-menu">
                                         <ul>
                                             <li class="has-children--multilevel-submenu">
-                                                <a href="#"><span>Accueil</span></a>
+                                                <a href="/"><span>Accueil</span></a>
                                            </li>
                                             {{--  <li class="has-children has-children--multilevel-submenu">
                                                 <a href="#"><span>Company</span></a>

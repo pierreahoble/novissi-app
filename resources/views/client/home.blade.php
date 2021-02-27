@@ -235,6 +235,20 @@
                 <div class="container">
                     <div class="row">
 
+                        @if (count($collectes)==0)
+                        <div class="contact-us-section-wrappaer section-space--pt_100 section-space--pb_70">
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-12 col-lg-12">
+                                        <div class="conact-us-wrap-one mb-30">
+                                            <h3 class="heading text-center">Aucun elements trouvés</h3>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @endif
+
                         @foreach ($collectes as $collecte)
                             
                         <div class="col-lg-4 col-md-6  mb-30 wow move-up animated" style="visibility: visible;">
@@ -281,26 +295,26 @@
 
                  
                         @endforeach
+                        
+   
+                           {{-- {{$collectes->links()}} --}}
+   
+                           <div class="col-lg-12 wow move-up animated" style="visibility: visible;">
+                               <div class="ht-pagination mt-30 pagination justify-content-center">
+                                   <div class="pagination-wrapper">
+   
+                                       <ul class="page-pagination">
+                                           
+                                           <li><a class="prev page-numbers" href="#">Precedent</a></li>
+                                           <li><a class="page-numbers current" href="#">1</a></li>
+                                           <li><a class="page-numbers" href="#">2</a></li>
+                                           <li><a class="next page-numbers" href="#">Suivant</a></li>
+                                       </ul>
+   
+                                   </div>
+                               </div>
+                           </div>
 
-                     
-
-                        {{-- {{$collectes->links()}} --}}
-
-                        <div class="col-lg-12 wow move-up animated" style="visibility: visible;">
-                            <div class="ht-pagination mt-30 pagination justify-content-center">
-                                <div class="pagination-wrapper">
-
-                                    <ul class="page-pagination">
-                                        
-                                        <li><a class="prev page-numbers" href="#">Precedent</a></li>
-                                        <li><a class="page-numbers current" href="#">1</a></li>
-                                        <li><a class="page-numbers" href="#">2</a></li>
-                                        <li><a class="next page-numbers" href="#">Suivant</a></li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </div>
 
                     </div>
                 </div>
