@@ -12,7 +12,6 @@ class HomeController extends Controller
 {
     public function home(){
         $collectes=Collecte::where('status',1)->paginate(3);
-
         return view('client.home',[
             'collectes'=>$collectes
         ]);
