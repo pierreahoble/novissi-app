@@ -114,6 +114,14 @@ Route::middleware([AuthMiddleware::class])->group(function () {
  //Enregistrer
  Route::post('register',[LoginController::class,'registerAdd']);
 
+ //Faire un don
+
+ Route::get('faireUnDon/{id}',[HomeController::class,'don'])->name('faireUnDonDeLaCollecte');
+
+
+ //Envoyer le don
+Route::post('faireUnDon',[HomeController::class,'validerDon'])->name('validerLeDon');
+
 
 
 

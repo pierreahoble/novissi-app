@@ -266,11 +266,11 @@
                                         <a href="#">{{$collecte->objet}}</a>
                                     </h5>
 
-                                    <div class="post-excerpt mt-15">
+                                    {{-- <div class="post-excerpt mt-15">
                                         <p>Using the profit accumulator is one such way, and you should understand why it increases your chances of the profits. …</p>
-                                    </div>
+                                    </div> --}}
                                     <div class="btn-text">
-                                        <a href="#">Faire un don.. <i class="ml-1 button-icon far fa-long-arrow-right"></i></a>
+                                        <a href="{{route('faireUnDonDeLaCollecte',['id'=>Crypt::encrypt($collecte->id)])}}">Faire un don.. <i class="ml-1 button-icon far fa-long-arrow-right"></i></a>
                                     </div>
                                 </div>
                                 <!-- Post info End -->

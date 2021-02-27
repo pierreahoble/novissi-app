@@ -199,7 +199,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mobile-menu-overlay__body">
+            {{-- <div class="mobile-menu-overlay__body">
                 <nav class="offcanvas-navigation">
                     <ul>
                         <li class="has-children">
@@ -331,7 +331,7 @@
                         </li>
                     </ul>
                 </nav>
-            </div>
+            </div> --}}
         </div>
     </div>
     <!--====================  End of mobile menu overlay  ====================-->
@@ -343,7 +343,7 @@
 
 
     <!--====================  search overlay ====================-->
-    <div class="search-overlay" id="search-overlay">
+    {{-- <div class="search-overlay" id="search-overlay">
 
         <div class="search-overlay__header">
             <div class="container-fluid">
@@ -366,7 +366,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!--====================  End of search overlay  ====================-->
 
     <!-- JS
@@ -435,7 +435,7 @@
 
 
     <!-- Main JS -->
-    {{-- <script src="{{asset('client/assets/js/main.js')}}"></script> --}}
+    <script src="{{asset('client/assets/js/main.js')}}"></script>
 
 
 </body>
