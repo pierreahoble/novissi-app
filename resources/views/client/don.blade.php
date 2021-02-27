@@ -4,7 +4,7 @@
 @section('contenu')
 
     <!-- breadcrumb-area start -->
-    <div class="breadcrumb-area">
+    <div class="breadcrumb-area" style="padding-top:20px; padding-bottom:20px">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -28,38 +28,44 @@
     <div id="main-wrapper">
         <div class="site-wrapper-reveal">
             <!--====================  Conact us Section Start ====================-->
-            <div class="contact-us-section-wrappaer section-space--pt_100 section-space--pb_70">
+            <div class="contact-us-section-wrappaer section-space--pt_100 section-space--pb_70 pt-5">
                 <div class="container">
-                    <div class="row align-items-center">
+                    <div class="row align-items-center justify-content-center">
 
-                        <div class="col-lg-12 col-lg-12">
+                        <div class="col-md-7">
                             <div class="contact-form-wrap">
 
                                 <form  action="{{route('validerLeDon')}}" method="post">
                                     <!-- <form id="contact-form" action="assets/php/mail.php" method="post"> -->
                                         @csrf
+                                    <input value="{{$id}}" type="hidden" name="collecte_id" type="text">
                                     <div class="contact-form">
                                         <div class="contact-input">
                                             <div class="contact-inner">
-                                                <input name="nom" type="text" placeholder="Nom">
+                                                
+                                                <input name="nom" type="text" placeholder="Nom" required>
+                                                @if( $errors->has('nom'))
+                                                    <p class="text-danger" >{{ $errors->first('nom') }}</p>
+                                                @endif
                                             </div>
                                             <div class="contact-inner">
-                                                <input  name="prenom" type="text" placeholder="Prénoms">
+                                                <input  name="prenom" type="text" placeholder="Prénoms" required>
+                                                @if( $errors->has('prenom'))
+                                                    <p class="text-danger" >{{ $errors->first('prenom') }}</p>
+                                                @endif
                                             </div>
                                         </div>
                                         <div class="contact-inner">
-                                            <input name="montant" type="number" placeholder="Montant à payer">
-                                        </div>
-                                        <div class="contact-inner">
-                                            <select name="mode" >
-                                                <option value="moov">Moov</option>
-                                                <option value="tgcel">Togocel</option>
-                                                <option value="rib">Banque</option>
-                                            </select>
-                                            {{-- <input name="con_subject" type="number" placeholder="Montant à payer"> --}}
+                                            <input name="montant" type="number" placeholder="Montant à payer" required>
+                                            @if( $errors->has('montant'))
+                                                <p class="text-danger" >{{ $errors->first('montant') }}</p>
+                                            @endif
                                         </div>
                                         <div class="contact-inner contact-message">
                                             <textarea name="commentaire" placeholder="Votre commentaire"></textarea>
+                                            @if( $errors->has('commentaire'))
+                                                <p class="text-danger" >{{ $errors->first('commentaire') }}</p>
+                                            @endif
                                         </div>
                                         <div class="submit-btn mt-20">
                                             <button class="ht-btn ht-btn-md" type="submit">Envoyé message</button>

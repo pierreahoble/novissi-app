@@ -10,10 +10,10 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
 Use Session;
 Use Carbon\carbon;
+use App\Utils\Paygate;
 
 class ClientController extends Controller
 {
-
     public function index()
     {
 
@@ -23,8 +23,6 @@ class ClientController extends Controller
             'collectes'=>$collectes
         ]);
     }
-
-
 
     public function detail($id)
     {
@@ -37,7 +35,6 @@ class ClientController extends Controller
 
     }
 
-
     public function ajouter()
     {
         $invites=Invite::where('user_id',Auth::user()->id)->get();
@@ -47,8 +44,6 @@ class ClientController extends Controller
             'invites'=>$invites
         ]);
     }
-
-
 
     public function ajoute(REQUEST $request)
     {
@@ -104,6 +99,8 @@ class ClientController extends Controller
         dd();
         return redirect()->route('ajouterCollecteUser');
     }
+
+
 
 
 

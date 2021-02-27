@@ -121,11 +121,7 @@ Route::middleware([AuthMiddleware::class])->group(function () {
 
  //Envoyer le don
 Route::post('faireUnDon',[HomeController::class,'validerDon'])->name('validerLeDon');
-
-
-
-
-
+Route::post('paygateRetour',[HomeController::class,'paygateRetour'])->name('paygateRetour');
 
 
  //Client

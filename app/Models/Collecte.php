@@ -18,7 +18,6 @@ class Collecte extends Model
         'datefin',
         'user_id',
         'categorie_id'
-
     ];
 
 
