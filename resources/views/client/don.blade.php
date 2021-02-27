@@ -27,7 +27,7 @@
 
     <div id="main-wrapper">
         <div class="site-wrapper-reveal">
-            <!--====================  Conact us Section Start ====================-->
+            <!--====================  faire le don ====================-->
             <div class="contact-us-section-wrappaer section-space--pt_100 section-space--pb_70">
                 <div class="container">
                     <div class="row align-items-center">
