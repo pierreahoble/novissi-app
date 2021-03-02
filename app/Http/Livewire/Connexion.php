@@ -45,8 +45,8 @@ class Connexion extends Component
             'password'=>bcrypt('1234'),
         ]);
 
-        Session::flash('succes','Votre compten a été créé avec succes, vous avez reçu email comportant votre mot de passe');
-        return  redirect('reponse');
+        Session::flash('succes','Votre compte a été créé avec succes, vous avez reçu email comportant votre mot de passe');
+        return  redirect('login');
     }
 
 
