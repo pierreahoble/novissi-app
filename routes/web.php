@@ -8,6 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\CollecteController;
 use App\Http\Controllers\CategorieController;
+use App\Http\Controllers\SendMailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -126,6 +127,10 @@ Route::post('paygateRetour',[HomeController::class,'paygateRetour'])->name('payg
 
  //Client
  Route::view('main','client.main');
+
+ //Mails
+ Route::get('/send-mail', [SendMailController::class, 'index'])->name('send.mail.index');
+ Route::get('/collecte-mail', [SendMailController::class, 'collecteMail'])->name('collecte');
 
 
 

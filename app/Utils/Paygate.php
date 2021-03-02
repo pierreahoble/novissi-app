@@ -1,5 +1,5 @@
 <?php
-namespace app\Utils\MoMo;
+namespace app\Utils;
 use Illuminate\Support\Facades\Http;
 class Paygate
 {
